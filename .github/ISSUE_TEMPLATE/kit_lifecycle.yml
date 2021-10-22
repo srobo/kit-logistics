@@ -51,14 +51,14 @@ body:
     attributes:
       label: Has the inventory been updated?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
   - type: checkboxes
     id: disclaimer
     attributes:
       label: Has the team signed a kit disclaimer form?
       options:
-        - label: Yes
+        - label: "Yes"
           required: true
   - type: textarea
     id: info
