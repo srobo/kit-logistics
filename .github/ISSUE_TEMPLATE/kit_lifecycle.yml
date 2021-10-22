@@ -1,0 +1,66 @@
+name: Kit Lifecycle Issue
+description: The KLI is a GitHub issue that tracks the status of kit with a given team during a competition year.
+title: "[KLI]: "
+labels: ["lifecycle"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        When a kit is not with SR, a *Kit Lifecycle* issue is created.
+
+        The KLI is a GitHub issue that tracks the status of kit with a given team during a competition year.
+
+        The KLI should not contain any information to link it to the team other than the TLA, to minimise data protection risk.
+
+        The KLI can be referenced to by other issue types, to link relevant information together.
+  - type: input
+    id: sryear
+    attributes:
+      label: Competition Year
+      description: Competition year during which the kit was issued
+      placeholder: e.g SRX
+    validations:
+      required: true
+  - type: input
+    id: tla
+    attributes:
+      label: Team TLA
+      description: TLA of the team the kit has been issued to
+      placeholder: e.g SRX
+    validations:
+      required: true
+  - type: input
+    id: rub_partcode
+    attributes:
+      label: Asset Code of RUB
+      description: The partcode of the RUB issued to the team, according to the SR Inventory.
+      placeholder: e.g srFX3X
+    validations:
+      required: true    
+  - type: dropdown
+    id: assignment
+    attributes:
+      label: How was the kit issued?
+      options:
+        - In-person (e.g Kickstart)
+        - Assigned prior to shipping
+        - Kit shipped via Courier
+        - Other (please add info below)
+  - type: dropdown
+    id: inventory_update
+    attributes:
+      label: Has the inventory been updated?
+      options:
+        - Yes
+        - No
+  - type: checkboxes
+    id: disclaimer
+    attributes:
+      label: Has the team signed a kit disclaimer form?
+      options:
+        - label: Yes
+          required: true
+  - type: textarea
+    id: info
+    attributes:
+      label: Any other relevant information?
