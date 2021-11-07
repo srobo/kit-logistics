@@ -1,0 +1,49 @@
+name: Kit Shipping Request
+description: A kit needs to be shipped to a team
+title: "[Shipping]: SR20XX TLA"
+labels: ["shipping", "outbound"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        When a team is not able to pick up a kit, it needs to be sent to them via post.
+
+        An issue should be created to request and track the shipping.
+
+        The issue should be closed when the kit has been received by the team.
+  - type: input
+    id: kli
+    attributes:
+      label: Kit Logistics Issue
+      description: The KLI for the kit assignment. 
+      placeholder: "#9999"
+    validations:
+      required: true
+  - type: input
+    id: tla
+    attributes:
+      label: Team TLA
+      description: TLA of the team the kit has been issued to
+      placeholder: e.g SRX
+    validations:
+      required: true
+  - type: input
+    id: country
+    attributes:
+      label: What country is the team located in?
+      description: Please use the ISO-3166 country code in ALPHA 2 format, e.g GB, DE, FR
+      value: GB
+    validations:
+      required: true    
+  - type: input
+    id: address
+    attributes:
+      label: Where can the address be located?
+      description: The address should be kept private, so please reference a document in Google Drive that has limited access.
+      placeholder: Link to Google Drive sheet
+    validations:
+      required: true    
+  - type: textarea
+    id: info
+    attributes:
+      label: Any other relevant information?

@@ -1,6 +1,6 @@
 name: Kit Lifecycle Issue
 description: The KLI is a GitHub issue that tracks the status of kit with a given team during a competition year.
-title: "[KLI]: "
+title: "[KLI]: SR20XX TLA"
 labels: ["lifecycle"]
 body:
   - type: markdown
